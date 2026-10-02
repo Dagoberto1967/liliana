@@ -1,0 +1,170 @@
+---
+title: "CONCEPTOS FUNDAMENTALES"  # Título principal del documento
+subtitle: "TALLER_1"  # Subtítulo del documento
+date: today  # Fecha actual en formato español
+author:  # Información sobre los autores
+  - name: Dagoberto Salgado Horta<br>Juanito Perez  # Nombres de los autores, separados por <br> para salto de línea en HTML
+    affiliation: "Escuela Superior de Administración pública"  # Afiliación de los autores (nombre de la universidad)
+    affiliation-url: "https://www.esap.edu.co/"  # URL que lleva a la página web de la universidad
+lang: es  # Idioma del documento, en este caso en español
+title-block-banner: "#98b7ed"
+format:
+  html:  # Formato de salida en HTML
+    page-layout: full  # Configura el diseño de la página para usar el ancho completo
+    fontsize: 14pt  # Tamaño de la fuente del documento (16 puntos)
+    toc: true  # Activa la tabla de contenido
+    toc-location: right  # Ubicación de la tabla de contenido (a la izquierda)
+    number-sections: true  # Activa la numeración de las secciones
+    code-fold: true  # Permite ocultar el código, mostrando solo un resumen con "Ver código"
+    code-summary: "Ver código"  # El texto mostrado para los resúmenes de código oculto
+    html-math-method: katex  # Usa Katex para representar las fórmulas matemáticas en HTML
+    smooth-scroll: true  # Activa el desplazamiento suave al navegar por la página
+    link-external-icon: true  # Muestra un ícono en los enlaces externos
+    link-external-newwindow: true  # Los enlaces externos se abren en una nueva ventana
+    citations-hover: true  # Activa el efecto hover (desplegar) en las citas
+    footnotes-hover: true  # Activa el efecto hover (desplegar) en las notas al pie
+    theme: "dark"  # Opción de tema alternativo con mayor contraste
+    highlight-style: "Monokai"  # Resaltado de código con contraste
+    code-overflow: "scroll"  # Controla desbordamiento de código en pantallas pequeñas
+    favicon: "favicon.ico"  # Favicon para el sitio web
+    background-color: "#EDA698"  # Fondo azul baby para todo el documento
+    text-align: justify  # Alineación justificada para el texto
+    color: "#333333"  # Color del texto (gris oscuro para mejorar la legibilidad)
+    link-color: "#3892f8"  # Color de los enlaces (azul)
+    heading-color: "#3892f8"  # Color de los encabezados (azul)
+editor: visual  # Usa el editor visual para la creación del documento en RStudio
+knitr:
+  opts_chunk:  # Opciones predeterminadas para los bloques de código (chunks) de R
+    message: false  # Mostrar mensajes generados por el código
+    warning: false  # Mostrar advertencias si es necesario
+    fig.align: "center"  # Alinea las figuras generadas al centro
+    fig.width: 6  # Ajusta el tamaño de las figuras a 6 unidades
+    fig.height: 6  # Ajusta la altura de las figuras a 6 unidades
+    out.width: "70%"  # Asegura que las figuras se adapten al 70% del ancho disponible
+---
+
+
+```{=html}
+<div style="position: absolute; top: 10px; right: 10px;">
+  <img src="Logo_Esap.png" alt="Logo esap" style="width: 150px; height: auto;">
+</div>
+```
+
+```{=html}
+<style type="text/css">
+  body {
+    font-size: 130%;
+    text-align: justify;
+  }
+</style>
+
+```
+
+
+```{r}
+# Verificar, instalar y activar el paquete "tidyverse"
+if (!require(tidyverse)) {
+  install.packages("tidyverse")
+}
+library(tidyverse)
+
+# Verificar, instalar y activar el paquete "kableExtra"
+if (!require(kableExtra)) {
+  install.packages("kableExtra")
+}
+library(kableExtra)
+
+# Verificar, instalar y activar el paquete "readxl"
+if (!require(readxl)) {
+  install.packages("readxl")
+}
+library(readxl)
+```
+
+# .Historia de la Estadística
+
+La historia de la estadística es el resultado de un proceso largo en el que diferentes civilizaciones han buscado **recopilar, organizar e interpretar datos** para la toma de decisiones. A continuación tienes una versión clara, estructurada y con enfoque académico:
+
+
+
+**1. Orígenes antiguos (antes del siglo XVII)**
+
+La estadística surge ligada a necesidades prácticas de organización social y administrativa:
+
+* En civilizaciones como Egipto Antiguo, Babilonia y China se realizaban censos de población, registros de impuestos y control de recursos.
+* En el Imperio Romano, los censos eran fundamentales para la administración militar y fiscal.
+
+En esta etapa, la estadística era **descriptiva y empírica**, sin fundamentos matemáticos formales.
+
+
+
+**2. Surgimiento de la estadística moderna (siglo XVII)**
+
+Se da un cambio clave: la estadística comienza a vincularse con la probabilidad.
+
+* John Graunt analizó registros de mortalidad en Londres, estableciendo bases para la demografía.
+* William Petty impulsó la “aritmética política”.
+* Blaise Pascal y Pierre-Simon Laplace desarrollaron la teoría de la probabilidad.
+
+Aquí nace la **estadística inferencial**, apoyada en modelos matemáticos.
+
+
+**3. Consolidación en el siglo XVIII y XIX**
+
+La estadística se formaliza como disciplina científica:
+
+* Carl Friedrich Gauss desarrolla la distribución normal.
+* Adolphe Quetelet introduce el concepto del “hombre promedio”.
+
+Se empieza a aplicar en:
+
+* Ciencias sociales
+* Astronomía
+* Biología
+
+La estadística se convierte en una herramienta clave para **describir fenómenos masivos**.
+
+
+
+**4. Desarrollo en el siglo XX**
+
+Se consolida la estadística moderna con grandes avances:
+
+* Ronald Fisher desarrolla el diseño experimental y la inferencia estadística.
+* Karl Pearson impulsa la correlación y regresión.
+* Jerzy Neyman formaliza las pruebas de hipótesis.
+
+Se expande su uso en:
+
+* Medicina
+* Economía
+* Ingeniería
+* Educación
+
+
+
+**5. Estadística contemporánea (siglo XXI)**
+
+Actualmente, la estadística está profundamente ligada a la tecnología:
+
+* Big Data
+* Inteligencia Artificial
+* Ciencia de datos
+
+Se utiliza en prácticamente todos los campos:
+
+* Investigación científica
+* Políticas públicas
+* Deportes
+* Negocios
+
+---
+
+**Conclusión**
+
+La estadística ha evolucionado desde simples conteos en civilizaciones antiguas hasta convertirse en una **ciencia fundamental para la toma de decisiones bajo incertidumbre**, apoyada en modelos matemáticos y herramientas computacionales avanzadas.
+
+
+
+
+
