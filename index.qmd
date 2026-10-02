@@ -81,7 +81,7 @@ if (!require(readxl)) {
 library(readxl)
 ```
 
-# .Historia de la Estadística
+# .Historia
 
 La historia de la estadística es el resultado de un proceso largo en el que diferentes civilizaciones han buscado **recopilar, organizar e interpretar datos** para la toma de decisiones. A continuación tienes una versión clara, estructurada y con enfoque académico:
 
